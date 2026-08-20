@@ -1,0 +1,16 @@
+name: astrbot_plugin_fix_gemini_toolcall
+display_name: Gemini 工具调用兼容修复
+short_desc: 修复 Gemini 工具响应名称被错误写成 call_* 导致的 400。
+desc: >-
+  修复 AstrBot Google GenAI 适配器在处理带非空调用 ID 的工具历史时，
+  将 call_*、call-* 或 toolu_* 错当作 functionResponse.name，进而触发
+  invalid Gemini function call history 400 的兼容性问题。
+version: 1.0.0
+author: LYB926
+repo: https://github.com/LYB926/astrbot_plugin_fix_gemini_toolcall
+astrbot_version: ">=4.26,<5"
+social_link: https://github.com/LYB926
+tags:
+  - gemini
+  - provider
+  - fix
